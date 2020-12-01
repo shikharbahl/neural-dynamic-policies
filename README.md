@@ -19,7 +19,7 @@ This is a [PyTorch](https://pytorch.org/) based implementation for our [NeurIPS 
 ```
 
 ### 1) Installation and Usage
-  1.  This code is based on [PyTorch](https://pytorch.org/). A requirement for this code is [MuJoCo 1.5](http://www.mujoco.org/). To install and setup the code, run these commands:
+  1.  This code is based on [PyTorch](https://pytorch.org/). This code needs [MuJoCo 1.5](http://www.mujoco.org/) to run. To install and setup the code, run the following commands:
   ```Shell
   #create directory for data and add dependencies
   cd neural-dynamic-polices; mkdir data/
@@ -64,4 +64,4 @@ This is a [PyTorch](https://pytorch.org/) based implementation for our [NeurIPS 
 <!-- - [Media Articles (New Scientist, MIT Tech Review and others)](http://pathak22.github.io/noreward-rl/index.html#media) -->
 
 ### 3) Acknowledgements
-We use the PPO infrastructure from: https://github.com/ikostrikov/pytorch-a2c-ppo-acktr-gail. We use environment code from: https://github.com/dibyaghosh/dnc/tree/master/dnc/envs, https://github.com/rlworkgroup/metaworld, https://github.com/vitchyr/multiworld. We use pytorch and RL utility functions from: https://github.com/vitchyr/rlkit. We use the DMP skeleton code from https://github.com/abr-ijs/imednet, https://github.com/abr-ijs/digit_generator. We also build on top of https://github.com/rll/rllab.git and https://github.com/openai/baselines.git.
+We use the PPO infrastructure from: https://github.com/ikostrikov/pytorch-a2c-ppo-acktr-gail. We use environment code from: https://github.com/dibyaghosh/dnc/tree/master/dnc/envs, https://github.com/rlworkgroup/metaworld, https://github.com/vitchyr/multiworld. We use pytorch and RL utility functions from: https://github.com/vitchyr/rlkit. We use the DMP skeleton code from https://github.com/abr-ijs/imednet, https://github.com/abr-ijs/digit_generator. We also use https://github.com/rll/rllab.git and https://github.com/openai/baselines.git.
