@@ -1,0 +1,8 @@
+**/__pycache__
+**pyc
+**npy
+**DS_Store
+**MUJOCO_LOG.TXT
+**/.ipynb_checkpoints
+data/
+.idea/

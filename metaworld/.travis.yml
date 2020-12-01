@@ -1,0 +1,61 @@
+language: python
+
+python: "3.5"
+
+services:
+  - docker
+
+addons:
+  apt:
+    packages:
+      - docker-ce
+
+env:
+  global:
+    - DOCKER_COMPOSE_VERSION=1.23.2
+
+jobs:
+  include:
+    - name: "Normal tests and pre-commit checks"
+      env:
+        - JOB_RUN_CMD="make ci-job"
+        - DEPLOY_FROM_THIS_JOB="true"
+
+before_install:
+  # Reconfigure docker to be more efficient
+  - |
+    echo '{
+      "experimental": true,
+      "storage-driver": "overlay2",
+      "max-concurrent-downloads": 50,
+      "max-concurrent-uploads": 50
+    }' | sudo tee /etc/docker/daemon.json
+  - sudo service docker restart
+  # Reinstall docker compose with the specified version. For more information, see:
+  # https://docs.travis-ci.com/user/docker/#using-docker-compose
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
+  # Pull cached docker image
+  - docker pull rlworkgroup/metaworld-ci:latest
+
+install:
+  - tag="rlworkgroup/metaworld-ci:${TRAVIS_BUILD_NUMBER}"
+  - TAG="${tag}" make build-ci
+
+before_script:
+  - ci_env="$(bash <(curl -s https://codecov.io/env))"
+
+script:
+  - ADD_ARGS="${ci_env}" TAG="${tag}" make run-ci RUN_CMD="${JOB_RUN_CMD}"
+
+deploy:
+  provider: script
+  script: TAG="${tag}" make ci-deploy-docker
+  on:
+    branch: master
+    condition: $DEPLOY_FROM_THIS_JOB = true
+
+notifications:
+  email: false

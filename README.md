@@ -7,7 +7,7 @@ Carnegie Mellon University & Facebook AI research <br/>
 
 <img src="images/method_ndp.jpg" width="500">
 
-This is a [[PyTorch](https://pytorch.org/) based implementation for our [NeurIPS 2020 paper on Neural Dynamic Policies for end-to-end sensorimotor learning](http://shikharbahl.github.io/neural-dynamic-policies/). In this work, we begin to close this gap and embed dynamics structure into deep neural network-based policies by reparameterizing action spaces with differential equations. We propose Neural Dynamic Policies (NDPs) that make predictions in trajectory distribution space as opposed to prior policy learning methods where action represents the raw control space. The embedded structure allow us to perform end-to-end policy learning under both reinforcement and imitation learning setups. If you find this work useful in your research, please cite:
+This is a [PyTorch](https://pytorch.org/) based implementation for our [NeurIPS 2020 paper on Neural Dynamic Policies for end-to-end sensorimotor learning](http://shikharbahl.github.io/neural-dynamic-policies/). In this work, we begin to close this gap and embed dynamics structure into deep neural network-based policies by reparameterizing action spaces with differential equations. We propose Neural Dynamic Policies (NDPs) that make predictions in trajectory distribution space as opposed to prior policy learning methods where action represents the raw control space. The embedded structure allow us to perform end-to-end policy learning under both reinforcement and imitation learning setups. If you find this work useful in your research, please cite:
 ```
   @inproceedings{bahl2020neural,
     Author = { Bahl, Shikhar and Mukadam, Mustafa and
@@ -27,13 +27,13 @@ This is a [[PyTorch](https://pytorch.org/) based implementation for our [NeurIPS
   git clone https://github.com/openai/baselines.git
 
   #create virtual env
-  conda create --name dmp-rl python=3.5
-  source activate dmp-rl
+  conda create --name ndp python=3.5
+  source activate ndp
 
   #install requirements
   pip install -r requirements.txt
   #OR try
-  conda env create -f dmp_rl_env.yaml
+  conda env create -f ndp.yaml
   ```
 
 
@@ -49,9 +49,9 @@ This is a [[PyTorch](https://pytorch.org/) based implementation for our [NeurIPS
   sh run_rl.sh ENV_NAME ALGO-TYPE EXP_ID SEED
 ```
 
-4. In order to visualize trained models/policies, use the same exact arguments as used for training but call `vis_ndp_policy.sh`
+4. In order to visualize trained models/policies, use the same exact arguments as used for training but call `vis_policy.sh`
 ```Shell
-  sh vis_ndp_policy.sh ENV_NAME ALGO-TYPE EXP_ID SEED
+  sh vis_policy.sh ENV_NAME ALGO-TYPE EXP_ID SEED
 ```
 
 
