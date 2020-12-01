@@ -2,7 +2,7 @@
 ## Neural Dynamic Policies for End-to-End Sensorimotor Learning ##
 #### In NeurIPS 2020 (Spotlight) [[Project Website]](http://shikharbahl.github.io/neural-dynamic-policies/) [[Project Video]](http://shikharbahl.github.io/neural-dynamic-policies/index.html#ProjectVideo)
 
-[Shikhar Bahl](http://www.cs.cmu.edu/~sbahl2/), [Mustafa Mukadam](https://www.cs.cmu.edu/~dpathak/), [Abhinav Gupta](https://www.cs.cmu.edu/~dpathak/), [Deepak Pathak](https://www.cs.cmu.edu/~dpathak/)<br/>
+[Shikhar Bahl](http://www.cs.cmu.edu/~sbahl2/), [Mustafa Mukadam](http://www.mustafamukadam.com/, [Abhinav Gupta](http://www.cs.cmu.edu/~abhinavg/), [Deepak Pathak](https://www.cs.cmu.edu/~dpathak/)<br/>
 Carnegie Mellon University & Facebook AI research <br/>
 
 <img src="images/method_ndp.jpg" width="500">
