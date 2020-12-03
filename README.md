@@ -44,7 +44,7 @@ This is a [PyTorch](https://pytorch.org/) based implementation for our [NeurIPS 
   python main_il.py --name NAME
   ```
 
-3. Training RL: run the script `run_rl.sh`. `ENV_NAME` is the environment (could be `throw`, `pick`, `push`, `soccer`, `faucet`). `ALGO-TYPE` is the algorithm (`dmp` for NDPs, `ppo` for PPO[Schulman., 2017] and `ppo-multi` for the multistep actor-critic architecture we present in our paper).
+3. Training RL: run the script `run_rl.sh`. `ENV_NAME` is the environment (could be `throw`, `pick`, `push`, `soccer`, `faucet`). `ALGO-TYPE` is the algorithm (`dmp` for NDPs, `ppo` for [PPO](https://arxiv.org/pdf/1707.06347.pdf) [Schulman et al., 2017] and `ppo-multi` for the multistep actor-critic architecture we present in our paper).
   ```Shell
   sh run_rl.sh ENV_NAME ALGO-TYPE EXP_ID SEED
 ```
@@ -57,7 +57,7 @@ This is a [PyTorch](https://pytorch.org/) based implementation for our [NeurIPS 
 
 
 ### 2) Other helpful pointers
-- [Paper](https://pathak22.github.io/noreward-rl/resources/icml17.pdf)
+- [Paper](http://shikharbahl.github.io/neural-dynamic-policies/resources/neurips2020.pdf)
 - [Project Website](http://shikharbahl.github.io/neural-dynamic-policies/)
 - [Project Video](https://youtu.be/e2yN_8nhLYY)
 <!-- - [Reddit Discussion](https://redd.it/6bc8ul) -->
