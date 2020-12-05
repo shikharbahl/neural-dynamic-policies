@@ -1,0 +1,344 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- ======================================================================= -->
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<style type="text/css">
+  body {
+    font-family: "Titillium Web","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:300;
+    font-size:18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  h1 {
+    font-weight:300;
+    max-width: 100%;
+  }
+
+  div {
+    max-width: 95%;
+    margin:auto;
+    padding: 10px;
+  }
+
+  .table-like {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .disclaimerbox {
+    background-color: #eee;
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    padding: 20px;
+  }
+
+  video.header-vid {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  table {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  iframe {
+    max-width: 100%;
+  }
+
+  img.header-img {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.rounded {
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  a:link,a:visited
+  {
+    color: #1367a7;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #208799;
+  }
+
+  td.dl-link {
+    height: 160px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+            15px 15px 0 0px #fff, /* The fourth layer */
+            15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+            20px 20px 0 0px #fff, /* The fifth layer */
+            20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+            25px 25px 0 0px #fff, /* The fifth layer */
+            25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+    margin-left: 10px;
+    margin-right: 45px;
+  }
+
+
+  .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+  }
+
+  .vert-cent {
+    position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  hr
+  {
+    border: 0;
+    height: 1px;
+    max-width: 1100px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+
+  #authors td {
+    padding-bottom:5px;
+    padding-top:30px;
+  }
+</style>
+<!-- ======================================================================= -->
+
+<!-- Start : Google Analytics Code -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64069893-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-64069893-4');
+</script> -->
+<!-- End : Google Analytics Code -->
+
+<script type="text/javascript" src="resources/hidebib.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+<head>
+<div max-width=100%>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" type="image/png" href="images/ri_logo.png">
+  <title>Neural Dynamic Policies for End-to-End Sensorimotor Learning</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="http://shikharbahl.github.io/neural-dynamic-policies/" />
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <meta property="og:site_name" content="Neural Dynamic Policies" />
+  <meta property="og:type" content="video.other" />
+  <meta property="og:title" content="Neural Dynamic Policies for End-to-End Sensorimotor Learning" />
+  <meta property="og:description" content="Bahl, Mukadam, Gupta, Pathak. Neural Dynamic Policies for End-to-End Sensorimotor Learning. NeurIPS 2020." />
+  <meta property="og:url" content="http://shikharbahl.github.io/neural-dynamic-policies/" />
+  <meta property="og:image" content="http://shikharbahl.github.io/neural-dynamic-policies/images/method_ndp.jpg" />
+  <meta property="og:video" content="https://www.youtube.com/embed/vQOHx8u_GWA?controls=0" />
+
+  <meta property="article:publisher" content="http://www.cs.cmu.edu/~sbahl2/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Neural Dynamic Policies for End-to-End Sensorimotor Learning" />
+  <meta name="twitter:description" content="Bahl, Mukadam, Gupta, Pathak. Neural Dynamic Policies for End-to-End Sensorimotor Learning. NeurIPS 2020." />
+  <meta name="twitter:url" content="http://shikharbahl.github.io/neural-dynamic-policies/" />
+  <meta name="twitter:image" content="http://shikharbahl.github.io/neural-dynamic-policies/images/method_ndp.jpg" />
+  <!-- <meta name="twitter:label1" content="Written by" />
+  <meta name="twitter:data1" content="Deepak Pathak" /> -->
+  <!-- <meta name="twitter:label2" content="Filed under" />
+  <meta name="twitter:data2" content="" /> -->
+  <meta name="twitter:site" content="@shikharbahl" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <meta name="twitter:card" content="player" />
+  <meta name="twitter:image" content="http://shikharbahl.github.io/neural-dynamic-policies/images/method_ndp.jpg" />
+  <meta name="twitter:player" content="https://www.youtube.com/embed/vQOHx8u_GWA?controls=0" />
+  <meta name="twitter:player:width" content="640" />
+  <meta name="twitter:player:height" content="360" />
+</head>
+
+<body>
+      <br>
+      <center><span style="font-size:44px;font-weight:bold;">Neural Dynamic Policies for End-to-End Sensorimotor Learning</span></center><br/>
+      <div class="table-like" style="justify-content:space-evenly;max-width:900px;margin:auto;">
+          <div><center><span style="font-size:18px"><a href="http://www.cs.cmu.edu/~sbahl2/" target="_blank">Shikhar Bahl</a></span></center>
+          <center><span style="font-size:18px">CMU</span></center>
+          </div>
+
+          <div><center><span style="font-size:18px"><a href="http://www.mustafamukadam.com/" target="_blank">Mustafa Mukadam</a></span></center>
+          <center><span style="font-size:18px">FAIR</span></center>
+          </div>
+
+          <div><center><span style="font-size:18px"><a href="http://www.cs.cmu.edu/~abhinavg/" target="_blank">Abhinav Gupta</a></span></center>
+          <center><span style="font-size:18px">CMU, FAIR</span></center>
+          </div>
+
+          <div><center><span style="font-size:18px"><a href="https://www.cs.cmu.edu/~dpathak/" target="_blank">Deepak Pathak</a></span></center>
+          <center><span style="font-size:18px">CMU</span></center>
+          </div>
+      </div>
+      <!-- <table align=center width=600px style="padding-top:0px;padding-bottom:0px">
+          <tr>
+            <td align=center width=600px><center><span style="font-size:15px">* equal contribution</span></center></td>
+          <tr/>
+      </table> -->
+      <center><span style="font-size:20px;"><a href='https://neurips.cc/virtual/2020/public/poster_354ac345fd8c6d7ef634d9a8e3d47b83.html'>NeurIPS 2020, <b> Spotlight Presentation</b></a></span></center>
+
+      <div class="table-like" style="justify-content:space-evenly;max-width:700px;margin:auto;padding:5px">
+        <td align=center width=100px><center><span style="font-size:28px"><a href="resources/neurips2020.pdf">[Paper]</a></span></center></td>
+        <td align=center width=100px><center><span style="font-size:28px"><a href="resources/slides.pdf">[Slides]</a></span></center></td>
+        <td align=center width=100px><center><span style="font-size:28px"><a href="resources/poster.pdf">[Poster]</a></span></center></td>
+        <td align=center width=100px><center><span style="font-size:28px"><a href='https://github.com/shikharbahl/neural-dynamic-policies/'>[GitHub Code]</a></span></center></td>
+      </div>
+
+      <center>
+      <iframe width="768" height="432" max-width="100%" src="https://www.youtube.com/embed/vQOHx8u_GWA?controls=0" frameborder="3" allowfullscreen></iframe></center>
+      <br>
+
+      <div style="width:800px; margin:0 auto; text-align=right;">
+        The current dominant paradigm in sensorimotor control, whether imitation or reinforcement learning, is to train policies directly in raw action spaces such as torque, joint angle, or end-effector position. This forces the agent to make decision at each point in training, and hence, limit the scalability to continuous, high-dimensional, and long-horizon tasks. In contrast, research in classical robotics has, for a long time, exploited dynamical systems as a policy representation to learn robot behaviors via demonstrations. These techniques, however, lack the flexibility and generalizability provided by deep learning or deep reinforcement learning and have remained under-explored in such settings. In this work, we begin to close this gap and embed dynamics structure into deep neural network-based policies by reparameterizing action spaces with differential equations. We propose Neural Dynamic Policies (NDPs) that make predictions in trajectory distribution space as opposed to prior policy learning methods where action represents the raw control space. The embedded structure allow us to perform end-to-end policy learning under both reinforcement and imitation learning setups. We show that NDPs achieve better or comparable performance to state-of-the-art approaches on many robotic control tasks using reward-based training, as well as on digit writing using demonstrations.
+      </div>
+      <br><hr>
+
+      <center><h1>Neural Dynamic Policies</h1></center>
+      <div style="width:800px; margin:0 auto; text-align=right">
+        Given an observation from the environment, a Neural Dynamic Policy generates parameters (weights of basis functions and goal for the robot) for a forcing function. An open loop controller then uses this function to output a set of actions for the robot to execute in the environment, collecting future states and rewards to train the policy.
+      </div>
+        <center><a href="images/method_ndp.jpg"><img src = "images/method_ndp.jpg" height="200px"></img></a><br></center>
+      <hr>
+
+
+      <!-- <center><h1>Overview of the Algorithm</h1></center><br/>
+      <center><a href="resources/method.png"><img src = "resources/method.png" width="800px"></img></a><br></center>
+      <br/><hr> -->
+
+
+            <center id="sourceCode"><h1>Source Code</h1></center>
+            <div style="width:750px; margin:0 auto; text-align=right">
+            We have released the PyTorch based implementation and our environments on github. Try our code!
+            </div>
+            <table align=center width=600px>
+              <tr>
+                <!-- <p style="margin-top:4px;"></p> -->
+                <td width=600px align=center>
+                  <center><span style="font-size:28px"><a href='https://github.com/shikharbahl/neural-dynamic-policies/'>[GitHub]</a></span></center>
+                </td>
+              </tr>
+            </table>
+            <br><hr>
+
+            <!-- <center id="sourceCode"><h1>In The Media</h1></center>
+            <div class="table-like" style="justify-content:space-evenly;max-width:900px;margin:auto;padding:5px">
+              <div><center><span style="font-size:24px"><a href="https://www.youtube.com/watch?v=IiBFqnNu7A8&ab_channel=YannicKilcher">Youtube Tutorial</a></span></center></div>
+              <div><center><span style="font-size:24px"><a href='https://www.reddit.com/r/MachineLearning/comments/gkkztj/r_selfsupervised_plan2explore_rl_agent_achieves/'>Reddit Discussion</a></span></center> </div>
+              <div><center><span style="font-size:24px"><a href='https://venturebeat.com/2020/05/13/plan2explore-adapts-to-exploration-tasks-without-fine-tuning/'>VentureBeat</a></span></center> </div>
+              <div><center><span style="font-size:24px"><a href='https://syncedreview.com/2020/05/15/self-supervised-plan2explore-rl-agent-achieves-sota-zero-shot-and-adaptation-performance/'>Synced Review</a></span></center> </div>
+              <div><center><span style="font-size:24px"><a href='https://www.talkrl.com/episodes/danijar-hafner'>TalkRL Podcast</a></span></center> </div>
+            </div>
+            <br><hr> -->
+
+              <center><h1>Paper and Bibtex</h1></center>
+              <table align=center width=850px>
+              <tr>
+              <td width="30%" align=left>
+              <!-- <p style="margin-top:4px;"></p> -->
+              <a href="https://arxiv.org/pdf/2005.05960.pdf"><img style="height:150px" src="resources/thumbnail.png"/></a>
+              <center>
+              <span style="font-size:20pt"><a href="https://arxiv.org/pdf/2005.05960.pdf">[Paper]</a>
+              <span style="font-size:20pt"><a href="https://arxiv.org/abs/2005.05960">[ArXiv]</a>
+              <!-- <span style="font-size:20pt"><a href="resources/slides.pdf">[Slides]</a></span>
+              <span style="font-size:20pt"><a href="resources/poster.pdf">[Poster]</a></span> -->
+              </center>
+              </td>
+              <td width="6%" align=center>
+              </td>
+              <td width="64%" align=left>
+              <!-- <p style="margin-top:4px;"></p> -->
+              <p style="text-align:left;"><b><span style="font-size:20pt">Citation</span></b><br/><span style="font-size:6px;">&nbsp;<br/></span> <span style="font-size:15pt">Shikhar Bahl, Mustafa Mukadam, Abhinav Gupta, Deepak Pathak. <b>Neural Dynamic Policies for End-to-End Sensorimotor Learning.</b> NeurIPS 2020.</span></p>
+              <!-- <p style="margin-top:20px;"></p> -->
+              <span style="font-size:20pt"><a shape="rect" href="javascript:togglebib('plan2explore2019_bib')" class="togglebib">[Bibtex]</a></span>
+              </td>
+              </tr>
+              <tr>
+              <td width="30%" align=left>
+              </td>
+              <td width="6%" align=center>
+              </td>
+              <td width="64%" align=left>
+                <div class="paper" id="plan2explore2019_bib">
+<pre xml:space="preserve">
+@inproceedings{sekar2020planning,
+    title={Neural Dynamic Policies
+    for End-to-End Sensorimotor Learning},
+    author={Bahl, Shikhar and Mukadam, Mustafa
+    and Gupta, Abhinav and Pathak, Deepak},
+    year={2020},
+    Booktitle={NeurIPS}
+}</pre>
+                </div>
+                </td>
+                </tr>
+            </table>
+          <br><hr>
+      </table>
+
+<script xml:space="preserve" language="JavaScript">
+hideallbibs();
+</script>
+</div>
+<table align=center width=800px>
+  <tr><td width=800px><left>
+  <center><h1>Acknowledgements</h1></center>
+  We thank Giovanni Sutanto, Stas Tiomkin and Adithya Murali for fruitful discussions. We also thank Franziska Meier, Akshara Rai, David Held, Mengtian Li, George Cazenavette, and Wen-Hsuan Chu for comments on early drafts of this paper. This work was supported in part by DARPA Machine Common Sense grant and Google Faculty Award to DP.<br>
+</left></td></tr>
+</table>
+<br><br>
+</body>
+</html>
