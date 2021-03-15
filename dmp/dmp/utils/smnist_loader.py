@@ -20,7 +20,7 @@ class MatLoader:
                   dmp_traj_key='DMPTrajArray'):
         # Load data struct
 
-        file = '/home/sbahl2/research/digit_generator/arr.m'
+        # file = Set file variable to /path/to/arr.m 
         data = sio.loadmat(file)
 
         # Parse data struct
